@@ -1,0 +1,188 @@
+html {
+    scroll-behavior: smooth;
+}
+
+:root {
+    --yellow: hsl(38, 100%, 56%);
+    --red: hsl(0, 80%, 33%);
+    --white: hsl(0, 0%, 100%);
+    --bg-header: hsl(0, 0%, 97%);
+
+    font-size: 62.5%;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+h1, h2, h3 {
+    font-family: 'Poppins', Arial, Helvetica, sans-serif;
+    line-height: 1;
+}
+
+p, a, li {
+    font-family: 'Open Sans', Arial, Helvetica, sans-serif;
+}
+
+/* CLASSES */
+.container {
+    max-width: min(1100px, 90%);
+    margin: 0 auto;
+}
+
+.flex {
+    display: flex;
+}
+.flex-center {
+    align-items: center;
+}
+.flex-between {
+    justify-content: space-between;
+}
+
+.ctaBtn {
+    background-color: var(--yellow);
+    font-family: 'Poppins', sans-serif;
+    color: var(--red);
+    border-radius: .4rem;
+    padding: .875rem 1.6rem;
+    transition: .3s ease;
+}
+
+a:hover {
+    color: var(--red);
+}
+
+/* HEADER */
+header {
+    padding: 2rem 0;
+    background: var(--bg-header);
+
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+}
+
+header .header-logo {
+    font-size: 3.2rem;
+    font-weight: 600;
+}
+
+header ul {
+    gap: 3.2rem;
+}
+
+header ul li a {
+    font-size: 1.6rem;
+}
+
+header .icon {
+    font-size: 1.8rem;
+    cursor: pointer;
+    display: none;
+}
+
+header.ativo {
+    position: fixed;
+    left: 0;
+    top: 0;
+    right: 0;
+}
+
+@media only screen and (max-width: 768px) {
+    header .header-logo {
+        font-size: 2rem;
+        font-weight: 600;
+    }
+
+    header ul {
+        gap: 2rem;
+    }
+
+    header ul li a {
+        font-size: 1.4rem;
+    }
+}
+
+@media only screen and (max-width: 620px) {
+    header .icon {
+        display: block;
+    }
+
+    header nav {
+        opacity: 0;
+        visibility: hidden;
+        transform: translateX(100%);
+        position: fixed;
+        transition: transform .3s ease;
+    }
+
+    header nav.ativo {
+        opacity: 1;
+        visibility: visible;
+        transform: translateX(0%);
+        background-color: var(--white);
+
+        position: fixed;
+        inset: 0;
+        z-index: 10001;
+
+        text-align: center;
+        padding-top: 7.2rem;
+    }
+
+    header nav.ativo i {
+        display: inline-block;
+        margin-bottom: 3.2rem;
+        text-align: center;
+    }
+
+    header ul {
+        flex-direction: column;
+    }
+
+    header nav.ativo i, header ul li a {
+        font-size: 2.6rem;
+    }
+
+    header nav.ativo .dropdown-menu a {
+        font-size: 1.6rem;
+    }
+}
+
+/* MAIN */
+main #intro {
+    background-color: rgba(0, 0, 0, 0.226);
+    text-align: center;
+    padding: 20rem 0 12rem;
+}
+
+main #intro h1 {
+    font-size: 4.2rem;
+}
+
+main #intro .ctaBtn {
+    font-size: 1.6rem;
+    display: inline-block;
+    margin-top: 2rem;
+}
+
+@media only screen and (max-width: 520px) {
+    main #intro {
+        padding: 8.2rem 0;
+    }
+    
+    main #intro .ctaBtn {
+        font-size: 1.6rem;
+        display: inline-block;
+        margin-top: 2rem;
+    }  
+}
