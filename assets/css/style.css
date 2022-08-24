@@ -95,6 +95,7 @@ header.ativo {
     left: 0;
     top: 0;
     right: 0;
+    animation: surgirMenu .3s ease;
 }
 
 @media only screen and (max-width: 768px) {
@@ -155,6 +156,15 @@ header.ativo {
 
     header nav.ativo .dropdown-menu a {
         font-size: 1.6rem;
+    }
+}
+
+@keyframes surgirMenu {
+    from {
+        transform: translateY(-20px);
+    } 
+    to {
+        transform: translateY(0);
     }
 }
 
