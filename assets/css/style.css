@@ -32,27 +32,10 @@ p, a, li {
 }
 
 /* CLASSES */
-.container {
-    max-width: min(1100px, 90%);
-    margin: 0 auto;
-}
-
-.flex {
-    display: flex;
-}
-.flex-center {
-    align-items: center;
-}
-.flex-between {
-    justify-content: space-between;
-}
-
 .ctaBtn {
     background-color: var(--yellow);
     font-family: 'Poppins', sans-serif;
     color: var(--red);
-    border-radius: .4rem;
-    padding: .875rem 1.6rem;
     transition: .3s ease;
 }
 
@@ -74,10 +57,6 @@ header {
 header .header-logo {
     font-size: 3.2rem;
     font-weight: 600;
-}
-
-header ul {
-    gap: 3.2rem;
 }
 
 header ul li a {
@@ -114,6 +93,10 @@ header.ativo {
 }
 
 @media only screen and (max-width: 620px) {
+    .ctaBtn {
+        font-size: 1.6rem;
+    }
+
     header .icon {
         display: block;
     }
@@ -173,21 +156,17 @@ main #intro {
     background-color: rgba(0, 0, 0, 0.226);
     text-align: center;
     padding: 20rem 0 12rem;
-}
-
-main #intro h1 {
-    font-size: 4.2rem;
+    margin-bottom: 6.4rem;
 }
 
 main #intro .ctaBtn {
-    font-size: 1.6rem;
     display: inline-block;
     margin-top: 2rem;
 }
 
 @media only screen and (max-width: 520px) {
     main #intro {
-        padding: 8.2rem 0;
+        padding-bottom: 12rem;
     }
     
     main #intro .ctaBtn {
