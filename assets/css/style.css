@@ -29,6 +29,7 @@ h1, h2, h3 {
 
 p, a, li {
     font-family: 'Open Sans', Arial, Helvetica, sans-serif;
+    line-height: 1.35;
 }
 
 /* CLASSES */
@@ -156,7 +157,7 @@ main #intro {
     background-color: rgba(0, 0, 0, 0.226);
     text-align: center;
     padding: 20rem 0 12rem;
-    margin-bottom: 6.4rem;
+    margin-bottom: 6.4rem ;
 }
 
 main #intro .ctaBtn {
@@ -174,4 +175,16 @@ main #intro .ctaBtn {
         display: inline-block;
         margin-top: 2rem;
     }  
+}
+
+main #cursos {
+    margin: 6.4rem 0;
+}
+
+main #maps {
+    margin: 6.4rem 0;
+}
+
+main #calltoaction {
+    margin: 6.4rem 0;
 }
